@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Transaction from '../components/Transactions/transactions';
-export default function Home() {
+import Bank from '../components/Bank/bank';
+export default function Card() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>AquaSquad Task</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="bg-white border-1">
-        <Transaction />
+        <Bank />
       </main>
 
     </div>
