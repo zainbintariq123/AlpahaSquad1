@@ -9,7 +9,7 @@ export default function Card() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white border-1">
+      <main className="bg-gray-400 h-screen">
         <Bank />
       </main>
 

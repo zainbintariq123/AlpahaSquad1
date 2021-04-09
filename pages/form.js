@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Hackers from '../components/Hackers/hacker.component';
+import NewsLetter from '../components/newsLetter/newletter';
 export default function Card() {
   return (
     <div>
@@ -9,8 +8,8 @@ export default function Card() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-gray-400 h-screen">
-        <Hackers />
+      <main className="bg-gray-300 border-1">
+        <NewsLetter />
       </main>
 
     </div>

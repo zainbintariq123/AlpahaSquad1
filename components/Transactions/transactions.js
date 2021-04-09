@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import style from './transaction.module.css';
 import Bank from '../Bank/bank';
+import data from "./data.json"
+import { useState } from 'react';
+
 export default function Transaction() {
+	const [images,setImages]=useState(data.data)
 	const historyData = [
 		{
 			name: 'Amount Received',
@@ -31,111 +35,92 @@ export default function Transaction() {
 			amount: '- $95',
 			status: 'refund'
 		}
-	]
-	return (
-		<>
-			<div>
-				<p className="font-medium mb-5 text-3xl text-base">Transaction History</p>
-				<div class="flex flex-col">
-					<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-						<div class="shadow overflow-hidden sm:rounded-lg">
-							<div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-								<table class="min-w-full divide-y divide-gray-200 bg-white">
-									<thead>
+	];
+	return (	
+		<div className="flex items-center justify-center bg-gray-400 w-auto">
+			<div className="bg-white rounded">
+		 		<p className="font-semibold pl-8 py-6 text-3xl text-base">Transaction History</p>
+				<div className="overflow-x-scroll overflow-x-auto">
+					<table class="divide-y divide-gray-200 bg-white w-auto">
+						<thead>
+							<tr>
+								<th class="capitalize pl-8 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+									Payment
+								</th>
+								<th class="capitalize pl-3 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+									Order ID
+										</th>
+								<th class="capitalize pl-6 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+									Date&Time
+								</th>
+								<th class="capitalize pl-6 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+									Amount
+								</th>
+								<th class="capitalize pl-8 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+									Status
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{
+								historyData.map((data, key) => {
+									return (
 										<tr>
-											<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-												Payment
-											</th>
-											<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-												Order ID
-											</th>
-											<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-												Date&Time
-											</th>
-											<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-												Amount
-											</th>
-											<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-												Status
-											</th>
+											<td className="whitespace-nowrap">
+												<div class="flex items-center pt-3 pl-8">
+													<div>
+														<button className={style.paymentBtn}>
+															<img src={images[key].path} alt="firstImage" />
+														</button>
+													</div>
+													<div class="px-3">
+														<div class="text-base pb-2">
+															{data.name}
+														</div>
+													</div>
+												</div>
+											</td>
+											<td class=" pl-3 py-2 whitespace-nowrap">
+												<div class="text-base pt-1">
+													ID: {data.order}
+												</div>
+											</td>
+											<td class="pl-4 py-2 whitespace-nowrap">
+												<span class="text-base px-2 text-sm">
+													{data.dateTime}
+												</span>
+											</td>
+											<td class={`pl-6 py-2 text-base whitespace-nowrap  text-sm ${data.status == 'completed' ? 'text-green-600' : 'text-red-600'}`}>
+												{data.amount}
+											</td>
+											<td className="px-8">
+												{
+													data.status == 'completed' && 
+														<div className="text-base bg-green-100 px-4 rounded-3xl text-center text-green-600 text-sm">
+															{data.status}
+														</div>	
+												}
+												{
+													data.status == 'ready' &&
+														<div className="text-base bg-yellow-100 px-4 rounded-3xl text-center text-yellow-600 text-sm">
+															{data.status}
+														</div>	
+												}
+												{
+													data.status =='refund' &&
+														<div className="text-base bg-red-100 px-4 rounded-3xl text-center text-red-600 text-sm">
+															{data.status}
+														</div>
+												}
+											</td>
 										</tr>
-									</thead>
-									<tbody class="bg-white">
-										{
-											historyData.map((data, key) => {	
-												return (
-													<tr>
-														<td class="px-6 py-4 whitespace-nowrap">
-															<div class="flex items-center">
-																<div class="flex-shrink-0 h-10 w-10">
-																	{
-																		key == 0 && 
-																			<Link href="/card">
-																				<button className={style.paymentBtn}>
-																					<img class="h-10 w-10"
-																						src="/first.svg" alt="" />
-																				</button>
-																			</Link>
-																	}
-																	{
-																		key == 1 && 
-																			<button className={style.paymentBtn}>
-																				<img class="h-10 w-10"
-																					src="/second.svg" alt="" />
-																			</button>
-																	}
-																	{
-																		key == 2 && 
-																			<button className={style.paymentBtn}>
-																				<img class="h-10 w-10"
-																					src="/third.svg" alt="" />
-																			</button>
-																	}
-																	{
-																		key == 3  && 
-																			<button className={style.paymentBtn}>
-																				<img class="h-10 w-10"
-																					src="/fourth.svg" alt="" />
-																			</button>
-																	}
-																</div>
-																<div class="ml-4">
-																	<div class="text-sm font-medium text-gray-900">
-																		{data.name}
-																	</div>	
-																</div>
-															</div>
-														</td>
-														<td class="px-6 py-4 whitespace-nowrap">
-															<div class="text-sm text-gray-500">
-																ID: {data.order}
-															</div>
-														</td>
-														<td class="px-6 py-4 whitespace-nowrap">
-															<span class="px-2 inline-flex text-xs leading-5 text-sm text-gray-500">
-																{data.dateTime}
-															</span>
-														</td>
-														<td  class= {`px-6 py-4 whitespace-nowrap text-sm ${data.status == 'completed' ? 'text-green-600' : 'text-red-600'}`}>
-															{data.amount}
-														</td>
-														<td>
-															<div className="bg-green-200  px-4 rounded-3xl text-center text-sm text-gray-500">
-																{data.status}
-															</div>
-														</td>
-													</tr>
-												)
-											})
-										}
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
+									)
+								})
+							}
+						</tbody>
+					</table>
 				</div>
-			</div>
-		</>
-
+		 	</div>
+		</div>
 	)
-}
+} 
