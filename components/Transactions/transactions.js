@@ -37,11 +37,33 @@ export default function Transaction() {
 		}
 	];
 	return (	
-		<div className="flex items-center justify-center bg-gray-400 w-auto">
-			<div className="bg-white rounded">
+		<div className="flex flex-col items-center justify-center bg-gray-400 h-screen">
+			<div className="flex flex-row"> 
+				<div>
+					<Link href="/card">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Card</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/mobile">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Mobile</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/form">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Form</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/hacker">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Hacker</button>
+					</Link>
+				</div>
+			</div>	
+			<div className="bg-white lg:w-10/12 rounded sm:w-11/12 w-full xl:10/12">
 		 		<p className="font-semibold pl-8 py-6 text-3xl text-base">Transaction History</p>
-				<div className="overflow-x-scroll overflow-x-auto">
-					<table class="divide-y divide-gray-200 bg-white w-auto">
+				<div className="overflow-x-auto">
+					<table class="divide-y divide-gray-200 bg-white w-full">
 						<thead>
 							<tr>
 								<th class="capitalize pl-8 py-3 text-left text-base font-medium text-gray-500 tracking-wider">

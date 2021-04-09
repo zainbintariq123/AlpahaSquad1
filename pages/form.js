@@ -8,7 +8,7 @@ export default function Card() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-gray-300 border-1">
+      <main className="bg-gray-300">
         <NewsLetter />
       </main>
 
