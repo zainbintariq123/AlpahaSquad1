@@ -7,7 +7,7 @@ export default function NewsLetter() {
 			<div className="flex flex-row items-center justify-center"> 
 				<div>
 					<Link href="/card">
-						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Card</button>
+						<button className=" focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Card</button>
 					</Link>
 				</div>
 				<div>
