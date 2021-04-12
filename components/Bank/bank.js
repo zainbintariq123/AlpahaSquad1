@@ -3,6 +3,29 @@ import style from './bank.module.css';
 export default function Bank() {
 	return (
 		<>
+			<div className="flex flex-col  bg-gray-400 h-screen">
+			<div className="flex flex-row items-center justify-center"> 
+				<div>
+					<Link href="/">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Dashboard</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/mobile">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Mobile</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/form">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Form</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/hacker">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Hacker</button>
+					</Link>
+				</div>
+			</div>
 			<div className="flex items-center justify-center h-screen">
 				<div className={`flex flex-col my-auto lg:w-2/6 md:w-2/5 sm:w-2/4 w-11/12 w-2/5 w-3/12 xl:w-1/4 ${style.mainCard}`} >
 					<div className="flex flex-row justify-between pt-3.5 px-8">
@@ -36,6 +59,7 @@ export default function Bank() {
 					</div>
 				</div>
 			</div>
+		</div>	
 		</>
 	)
 }

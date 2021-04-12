@@ -3,6 +3,30 @@ import style from './mobile.module.css';
 export default function Mobile() {
 	return (
 		<>
+		<div className="flex flex-col items-center justify-center bg-gray-400 h-screen">
+			<div className="flex flex-row"> 
+				<div>
+					<Link href="/card">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Card</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Dashboard</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/form">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Form</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/hacker">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Hacker</button>
+					</Link>
+				</div>
+			</div>
+
 						
 			<div className="flex items-center justify-center mt-auto h-screen ">
 
@@ -59,6 +83,7 @@ export default function Mobile() {
 					</div>		
 				</div>
 			</div>
+		</div>
 		</>
 	)
 }

@@ -1,7 +1,31 @@
+import Link from 'next/link';
 import style from './newsLetter.module.css';
 export default function NewsLetter() {
 	return (
 		<>
+		<div className="flex flex-col bg-gray-400 h-screen">
+			<div className="flex flex-row items-center justify-center"> 
+				<div>
+					<Link href="/card">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Card</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/mobile">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Mobile</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Dashboard</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/hacker">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Hacker</button>
+					</Link>
+				</div>
+			</div>
 			<div className="flex item-center justify-center h-screen">
 				<div className="bg-white flex flex-col lg:w-1/3 m-auto md:w-2/3 sm:w-11/12 w-full xl:w-5/12 h-auto">
 					<div className="ml-8 pt-6">
@@ -30,6 +54,7 @@ export default function NewsLetter() {
 					</div>
 				</div>
 			</div>
+		</div>	
 		</>
 	)
 }

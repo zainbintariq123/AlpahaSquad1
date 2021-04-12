@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Hackers() {
 	const newsArray = [
 		{
@@ -11,6 +12,29 @@ export default function Hackers() {
 	]
 	return (
 		<>
+			<div className="flex flex-col  bg-gray-400 h-screen">
+			<div className="flex flex-row items-center justify-center"> 
+				<div>
+					<Link href="/card">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Card</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/mobile">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Mobile</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/form">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Form</button>
+					</Link>
+				</div>
+				<div>
+					<Link href="/hacker">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Hacker</button>
+					</Link>
+				</div>
+			</div>
 			<div className="flex flex-col h-screen items-center justify-center">
 				<div className="bg-gray-50 flex flex-col m-auto rounded w-full sm:w-11/12 md:w-2/3  xl:w-1/4">
 					<div className="ml-6">
@@ -46,6 +70,7 @@ export default function Hackers() {
 						}
 					</div>
 			</div>
+		</div>	
 		</>
 	)
 }
