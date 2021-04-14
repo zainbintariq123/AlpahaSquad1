@@ -12,7 +12,6 @@ export default function MobilePage() {
       <main className="bg-gray-200 h-screen">
         <Mobile />
       </main>
-
     </div>
   )
 }

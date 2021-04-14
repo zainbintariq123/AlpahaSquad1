@@ -46,7 +46,7 @@ export default function Hackers() {
 						{
 							newsArray.map((news,key)=>{
 								return (
-									<div className="bg-white pb-5">
+									<div className="bg-white pb-5 cursor-pointer">
 										{
 											key == 0 &&  
 												<p className="ml-6 pt-6 text-gray-400 text-justify text-xs">{news.time}</p>	

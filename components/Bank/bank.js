@@ -42,7 +42,7 @@ export default function Bank() {
 						<p className="font-medium text-base text-white">Henry Richardson</p>
 					</div>
 					<div className="pl-8">
-						<p className="font-medium font-semibold text-2xl text-white">4567  ****  ****  4501</p>	
+						<p className="font-medium font-semibold text-2xl text-white select-none">4567  ****  ****  4501</p>	
 					</div>
 					<div className="flex flex-row justify-between px-8 my-4">
 						<div>

@@ -1,0 +1,16 @@
+.line {
+    background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+}
+
+.textBen {
+	background-image: linear-gradient(91.12deg, #F56565 0%, #E55278 53.57%, #D53F8C 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+}
+.member {
+	background-image: url('../../../public/member.png');
+	background-size: cover;
+}

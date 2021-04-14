@@ -59,26 +59,31 @@ export default function Transaction() {
 						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">Hacker</button>
 					</Link>
 				</div>
+				<div>
+					<Link href="/new">
+						<button className="focus-within:outline-none border bg-blue-700 rounded	text-white p-3">New</button>
+					</Link>
+				</div>
 			</div>	
 			<div className="bg-white lg:w-10/12 rounded sm:w-11/12 w-full xl:10/12">
 		 		<p className="font-semibold pl-8 py-6 text-3xl text-base">Transaction History</p>
 				<div className="overflow-x-auto">
-					<table class="divide-y divide-gray-200 bg-white w-full">
+					<table className="divide-y divide-gray-200 bg-white w-full">
 						<thead>
 							<tr>
-								<th class="capitalize pl-8 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+								<th className="capitalize pl-8 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
 									Payment
 								</th>
-								<th class="capitalize pl-3 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+								<th className="capitalize pl-3 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
 									Order ID
 										</th>
-								<th class="capitalize pl-6 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+								<th className="capitalize pl-6 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
 									Date&Time
 								</th>
-								<th class="capitalize pl-6 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+								<th className="capitalize pl-6 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
 									Amount
 								</th>
-								<th class="capitalize pl-8 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
+								<th className="capitalize pl-10 py-3 text-left text-base font-medium text-gray-500 tracking-wider">
 									Status
 								</th>
 							</tr>
@@ -89,48 +94,48 @@ export default function Transaction() {
 									return (
 										<tr>
 											<td className="whitespace-nowrap">
-												<div class="flex items-center pt-3 pl-8">
+												<div className="flex items-center pt-3 pl-8">
 													<div>
 														<button className={style.paymentBtn}>
 															<img src={images[key].path} alt="firstImage" />
 														</button>
 													</div>
-													<div class="px-3">
-														<div class="text-base pb-2">
+													<div className="px-3">
+														<div className="text-base pb-2">
 															{data.name}
 														</div>
 													</div>
 												</div>
 											</td>
-											<td class=" pl-3 py-2 whitespace-nowrap">
-												<div class="text-base pt-1">
+											<td className=" pl-3 py-2 whitespace-nowrap">
+												<div className="text-base pt-1">
 													ID: {data.order}
 												</div>
 											</td>
-											<td class="pl-4 py-2 whitespace-nowrap">
-												<span class="text-base px-2 text-sm">
+											<td className="pl-4 py-2 whitespace-nowrap">
+												<span className="text-base px-2 text-sm">
 													{data.dateTime}
 												</span>
 											</td>
-											<td class={`pl-6 py-2 text-base whitespace-nowrap  text-sm ${data.status == 'completed' ? 'text-green-600' : 'text-red-600'}`}>
+											<td className={`pl-6 py-2 text-base whitespace-nowrap  text-sm ${data.status == 'completed' ? 'text-green-600' : 'text-red-600'}`}>
 												{data.amount}
 											</td>
-											<td className="px-8">
+											<td className="px-10">
 												{
 													data.status == 'completed' && 
-														<div className="text-base bg-green-100 px-4 rounded-3xl text-center text-green-600 text-sm">
+														<div className="text-base bg-green-100 rounded-3xl text-center text-green-600 text-sm">
 															{data.status}
 														</div>	
 												}
 												{
 													data.status == 'ready' &&
-														<div className="text-base bg-yellow-100 px-4 rounded-3xl text-center text-yellow-600 text-sm">
+														<div className="text-base bg-yellow-100 rounded-3xl text-center text-yellow-600 text-sm">
 															{data.status}
 														</div>	
 												}
 												{
 													data.status =='refund' &&
-														<div className="text-base bg-red-100 px-4 rounded-3xl text-center text-red-600 text-sm">
+														<div className="text-base bg-red-100 rounded-3xl text-center text-red-600 text-sm">
 															{data.status}
 														</div>
 												}

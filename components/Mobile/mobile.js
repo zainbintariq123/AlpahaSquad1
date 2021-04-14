@@ -42,7 +42,7 @@ export default function Mobile() {
 						</div>
 						<div className="flex items-center pl-11">
 							<button className="border focus-within:outline-none h-10 rounded-full w-10">
-								<img src="/next.svg" className="pl-3" ></img>
+								<img src="/next.svg" className="pl-3.5" ></img>
 							</button>
 						</div>
 					</div>
@@ -72,12 +72,12 @@ export default function Mobile() {
 								<img src="/star.svg"></img>
 							</div>
 							<div className="flex items-center ml-3">
-								<p>5.0</p>
+								<p className="font-semibold text-indigo-700">5.0</p>
 							</div>
 						</div>
 					</div>
-					<div>
-						<button className="mr-32 border border-blue-400 mb-5  mt-2 px-4 rounded text-2xl text-blue-300">
+					<div className="mb-2">
+						<button className="border border-indigo-700 focus-within:outline-none mb-5 mr-48 mt-2 px-3 rounded text-indigo-700 text-sm">
 							Edit Product
 						</button>
 					</div>		
