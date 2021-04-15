@@ -41,10 +41,8 @@ export default function Home() {
             input &&
               <input class="form-input mt-1 border w-auto absolute left-[42rem]" placeholder="Jane Doe"/>
           }
-  
         </div>
       </main>
-
     </div>
   )
 }

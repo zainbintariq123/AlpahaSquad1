@@ -10,7 +10,7 @@ export default function Card() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-screen">
+      <main className="container m-auto">
         <Main />
       </main>
     </div>

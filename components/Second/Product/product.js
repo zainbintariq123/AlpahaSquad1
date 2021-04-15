@@ -3,11 +3,55 @@ import style from './product.module.css';
 export default function Product() {
 	return (
 		<>
-			<div>
-				<div className="flex pl-20 pt-40">
+		
+			<div className={`${style.back} relative`}>
+				<div className="flex pl-20 absolute top-[-89px] ">
+					<div className="w-[1/4] shadow-md bg-white">
+						<div className="w-2/3">
+							<p className="text-[2rem] pl-6 pt-6">Download the app</p>
+						</div>
+						<div className="flex justify-end">
+							<div className="py-6 ">
+								<img src="/download.svg" className="pr-7"></img>
+							</div>
+						</div>
+					</div>
+					<div className="w-[1/4] rounded shadow-md mx-4 bg-white">
+						<div className="w-2/3">
+							<p className="text-[2rem] pl-6 pt-6">Effortless onboarding</p>
+						</div>
+						<div className="flex justify-end">
+							<div className="py-6">
+								<img src="/home.svg" className="pr-7"></img>
+							</div>
+						</div>
+					</div>	
+					<div className="w-[1/4] rounded shadow-md mr-3 bg-white">
+						<div className="w-2/3">
+							<p className="text-[2rem] pl-6 pt-6">Access from anywhere</p>
+						</div>
+						<div className="flex justify-end">
+							<div className="py-6">
+								<img src="/access.svg" className="pr-7"></img>
+							</div>
+						</div>
+					</div>
+					<div className="w-[1/4] rounded shadow-md bg-white">
+						<div>
+							<p className="text-[2rem] pl-6 pt-6">Build & ship rapidly</p>
+						</div>
+						<div className="flex justify-end">
+							<div className="py-6 ">  
+								<img src="/ship.svg" className="pr-7"></img>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div className="flex pl-20 pt-80">
 					<div className="w-2/3">
 						<p className="text-[4rem] leading-[4.4rem]">Boost adoption of product and services</p>	
-						<p className="text-[1.75rem] pt-8">
+						<p className="text-[1.75rem] pt-8 w-11/12">
 							Here at Globex we take special care of what your organization
 							needs instead of selling you a mass market tool that takes a
 							one size fits all approach. I personally review each and every

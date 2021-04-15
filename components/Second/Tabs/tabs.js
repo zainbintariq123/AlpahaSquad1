@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Tabs() {
 	return (
 		<>
-			<div className="flex pl-20 pt-36">
+			<div className="flex pl-20 pt-36 border">
 				<div className="w-[1/4] shadow-md">
 					<div className="w-1/2">
 						<p className="text-[2rem] pl-6 pt-6">Download the app</p>
