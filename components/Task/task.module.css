@@ -1,0 +1,11 @@
+.plusBtn {
+	position: absolute;
+}
+
+.textBox {
+	position: absolute;
+}
+
+.mainDiv {
+	background:  linear-gradient(91.12deg, #F56565 0%, #E55278 53.57%, #D53F8C 100%);
+}
