@@ -105,7 +105,7 @@ export default function Task() {
           <button className={`${styles.mainDiv} focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white`} onClick={showData}>Click To Console Data</button>
         </div>
         <div className="text-center">
-          <p className="text-2xl"> Text area should be displayed here After Entering. </p>
+          <p className="text-2xl"> Text will be display in table After Entering. </p>
         </div>
         <div>
           <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
