@@ -5,10 +5,10 @@ export default function Product() {
 		<>
 		
 			<div className={`${style.back} relative`}>
-				<div className="flex pl-20 absolute top-[-89px] ">
-					<div className="w-[1/4] shadow-md bg-white">
+				<div className="flex flex-wrap static sm:static md:absolute lg:absolute top-[-89px] px-10 ">
+					<div className="w-40 sm:w-40  md:w-[1/4] lg:w-[1/4] shadow-md bg-white my-4 sm:my-4 md:my-0 lg:my-0">
 						<div className="w-2/3">
-							<p className="text-[2rem] pl-6 font-bold pt-6 f-l">Download the app</p>
+							<p className="text-base sm:text-base md:text-[2rem] lg:text-[2rem] pl-6 font-bold pt-6 f-l">Download the app</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6 ">
@@ -16,9 +16,9 @@ export default function Product() {
 							</div>
 						</div>
 					</div>
-					<div className="w-[1/4] rounded shadow-md mx-4 bg-white">
+					<div className="w-40 sm:w-40 md:w-[1/4] lg:w-[1/4] rounded shadow-md ml-3 sm:ml-3 lg:mx-4 bg-white my-4 sm:my-4 md:my-0 lg:my-0">
 						<div className="w-2/3">
-							<p className="text-[2rem] pl-6 pt-6 pt-6 font-bold f-l">Effortless onboarding</p>
+							<p className="text-base sm:text-base md:text-[2rem] lg:text-[2rem] pl-6 pt-6 pt-6 font-bold f-l">Effortless onboarding</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6">
@@ -26,9 +26,9 @@ export default function Product() {
 							</div>
 						</div>
 					</div>	
-					<div className="w-[1/4] rounded shadow-md mr-3 bg-white">
-						<div className="w-2/3">
-							<p className="text-[2rem] pl-6 pt-6 pt-6 f-l font-bold">Access from anywhere</p>
+					<div className="w-40 sm:w-40 md:w-[1/4] lg:w-[1/4] rounded shadow-md mr-0 sm:mr-0 md:mr-3 lg:mr-3 bg-white">
+						<div className="w-40 sm:w-40 md:w-2/3 lg:w-2/3">
+							<p className="text-base sm:text-base md:text-[2rem] lg:text-[2rem] pl-6 pt-6 pt-6 f-l font-bold">Access from anywhere</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6">
@@ -36,9 +36,9 @@ export default function Product() {
 							</div>
 						</div>
 					</div>
-					<div className="w-[1/4] rounded shadow-md bg-white">
+					<div className="w-40 sm:w-40 md:w-[1/4] lg:w-[1/4] rounded shadow-md bg-white ml-3">
 						<div>
-							<p className="text-[2rem] pl-6 pt-6 pt-6 f-l font-bold">Build & ship rapidly</p>
+							<p className="text-base sm:text-base md:text-[2rem] lg:text-[2rem] pl-6 pt-6 pt-6 f-l font-bold">Build & ship rapidly</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6 ">  
@@ -48,10 +48,10 @@ export default function Product() {
 					</div>
 				</div>
 
-				<div className="flex pl-20 pt-80">
-					<div className="w-2/3">
-						<p className="text-[4rem] leading-[4.4rem] font-bold f-l">Boost adoption of product and services</p>	
-						<p className="text-[1.75rem] pt-8 w-11/12 f-f-r">
+				<div className="flex flex-wrap pl-20 pt-10 sm:pt-10 md:pt-80 lg:pt-80">
+					<div className="w-full sm:w-full md:w-2/3 lg:w-2/3">
+						<p className="text-4xl sm:text-4xl md:text-[4rem] lg:text-[4rem] leading-9 sm:leading-9 md:leading-[4.4rem] lg:leading-[4.4rem] font-bold f-l px-5 sm:px-5 md:px-0 lg:px-0 ">Boost adoption of product and services</p>	
+						<p className="text-base sm:text-base md:text-[1.75rem] lg:text-[1.75rem] pt-8 w-full sm:w-full md:w-11/12 lg:w-11/12 f-f-r text-justify px-5 sm:px-5 md:px-0 lg:mx-0">
 							Here at Globex we take special care of what your organization
 							needs instead of selling you a mass market tool that takes a
 							one size fits all approach. I personally review each and every
@@ -59,13 +59,13 @@ export default function Product() {
 						</p>
 
 						<p 
-							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold">
+							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold pl-6 sm:pl-6 md:pl-0 lg:pl-0">
 							Lets Get Started 
 							<span className="mt-1 ml-2">
 								<img src="/next.svg"></img>
 							</span>   
-						</p>
 
+						</p>
 					</div>	
 
 					<div className="relative">
@@ -98,8 +98,8 @@ export default function Product() {
 						</div>
 					</div>
 				</div>
-				<div className="flex pt-[11.375rem]"  > 
-					<div className="pl-11 relative">
+				<div className="flex flex-wrap pt-10 sm:pt-10 md:pt-[11.375rem] lg:pt-[11.375rem]"> 
+					<div className="pl-0 sm:pl-0 md:pl-11 lg:pl-11 relative">
 						<img src="/Event.svg"></img>
 						<div className="absolute bg-white p-4 rounded-md shadow-md left-[4.5rem] top-[24.5rem]">
 							<div className="pt-6">
@@ -120,9 +120,9 @@ export default function Product() {
 							</div>
 						</div>
 					</div>
-					<div className="w-2/3 pl-20">
-						<p className="text-[4rem] leading-[4.4rem] font-bold f-l">Stay up to date with how you’re performing</p>	
-						<p className="text-[1.75rem] pt-8 f-f-r">
+					<div className="w-full sm:w-full md:w-2/3 lg:w-2/3 pl-0 sm:pl-0 md:pl-20 lg:pl-20 pt-10 sm:pt-10 md:pt-0 lg:pt-0">
+						<p className="text-4xl sm:text-4xl md:text-[4rem] lg:text-[4rem] leading-9 sm:leading-9 md:leading-[4.4rem] lg:leading-[4.4rem] font-bold f-l px-5 sm:px-5 md:px-0 lg:px-0 ">Stay up to date with how you’re performing</p>	
+						<p className="text-base sm:text-base md:text-[1.75rem] lg:text-[1.75rem] pt-8 w-full sm:w-full md:w-11/12 lg:w-11/12 f-f-r text-justify px-5 sm:px-5 md:px-0 lg:mx-0">
 							Here at Globex we take special care of what your organization needs instead of
 							selling you a mass market tool that takes a one size fits all approach.
 							I personally review each and every client business and oversee the team
@@ -130,7 +130,7 @@ export default function Product() {
 						</p>
 
 						<p 
-							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold">
+							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold pl-6 sm:pl-6 md:pl-0 lg:pl-0">
 							Lets Get Started 
 							<span className="mt-1 ml-2">
 								<img src="/next.svg"></img>
@@ -139,10 +139,10 @@ export default function Product() {
 
 					</div>
 				</div>
-				<div className="flex pl-20 pt-40 mt-7">
-					<div className="w-2/3 mr-20">
-						<p className="text-[4rem] leading-[4.4rem] font-bold f-l">Easily manage sales through our invoicing system</p>	
-						<p className="text-[1.75rem] pt-8 f-f-r">
+				<div className="flex flex-wrap pl-0 sm:pl-0 md:pl-20 lg:pl-20 pt-10 sm:pt-10 md:pt-40 lg:pt-10 mt-7">
+					<div className="w-full sm:w-full md:w-11/12 lg:w-11/12 mr-0 sm:mr-0 md:mr-20 lg:mr-20">
+						<p className="text-4xl sm:text-4xl md:text-[4rem] lg:text-[4rem] leading-9 sm:leading-9 md:leading-[4.4rem] lg:leading-[4.4rem] font-bold f-l px-5 sm:px-5 md:px-0 lg:px-0 ">Easily manage sales through our invoicing system</p>	
+						<p className="text-base sm:text-base md:text-[1.75rem] lg:text-[1.75rem] pt-8 w-full sm:w-full md:w-11/12 lg:w-11/12 f-f-r text-justify px-5 sm:px-5 md:px-0 lg:mx-0">
 							Here at Globex we take special care of what your organization needs instead
 							of selling you a mass market tool that takes a one size fits all approach.
 							I personally review each and every client business and oversee the team
@@ -150,7 +150,7 @@ export default function Product() {
 						</p>
 
 						<p 
-							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold">
+							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold pl-6 sm:pl-6 md:pl-0 lg:pl-0">
 							Lets Get Started 
 							<span className="mt-1 ml-2">
 								<img src="/next.svg"></img>
@@ -160,7 +160,7 @@ export default function Product() {
 					</div>	
 					<div className="relative">
 						<img src="/invoice.svg"></img>
-						<div className="border rounded shadow-md absolute left-[62px] bottom-[-110px] bg-white p-[1.103rem] w-[17.5rem]">
+						<div className="border rounded shadow-md absolute left-[13px] bottom-[-110px] bg-white p-[1.103rem] w-[17.5rem]">
 							<p className="text-[1.125rem]">Invoice # 35RD87</p>	
 							<p className="text-xs text-gray-400 pt-2"> Assigned to: Josh Rollins  </p>
 							<p className="inline-flex text-sm pt-5"> <img src="/user.svg"></img> <span className="ml-2">Specter Consultancy</span> </p>
@@ -172,7 +172,6 @@ export default function Product() {
 									View Invoice <span> <img src="/productTick.svg" className="mt-1 px-2"></img></span>  
 								</button>
 							</div>
-
 						</div>
 					</div>
 				</div>

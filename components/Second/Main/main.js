@@ -15,10 +15,10 @@ export default function Main() {
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"></link>
 			</Head>
 			<main className="">
-				<div className="flex flex-row relative">
-					<div className="pl-20 w-1/2">
+				<div className="flex flex-row flex-wrap relative hidden">
+					<div className="pl-20 w-full sm:w-full md:w-1/2 lg:w-1/2">
 						<div className="pt-11">
-							<p className="inline-block py-5 px-3.5 border text-center text-4xl m-0 bg-gray-900 text-white">
+							<p className="inline-block py-5 px-3.5 border text-center text-[2rem] m-0 bg-gray-900 text-white f-m-w">
 								PR
 							</p>
 						</div>
@@ -35,20 +35,20 @@ export default function Main() {
 						</p>
 						<button className={`w-1/2 focus-within:outline-none h-9 text-white rounded ${style.btnColor} mt-7`}>Let's Build</button>
 					</div>
-					<div className={`${style.bgColor} w-1/2`}>
+					<div className={`${style.bgColor} w-full sm:w-full md:w-1/2 lg:w-1/2`}>
 						<nav className="flex items-center justify-between flex-wrap p-6">
 							<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
 								<div className="text-sm lg:flex-grow">
-									<a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-white mr-4">
+									<a href="#responsive-header" className="block lg:inline-block lg:mt-0 text-white mr-3 f-l">
 										Home
 									</a>
-									<a href="#responsive-header" className="block px-8 lg:inline-block lg:mt-0 text-white mr-4">
+									<a href="#responsive-header" className="block px-8 lg:inline-block lg:mt-0 text-white f-l mr-3">
 										About Us
 									</a>
-									<a href="#responsive-header" className="block px-8 lg:inline-block lg:mt-0 text-white mr-4">
+									<a href="#responsive-header" className="block px-8 lg:inline-block lg:mt-0 text-white f-l mr-3">
 										Pricing
 									</a>
-									<a href="#responsive-header" className="block px-8 lg:inline-block lg:mt-0 text-white mr-4">
+									<a href="#responsive-header" className="block px-8 lg:inline-block lg:mt-0 text-white f-l">
 										Resources
 									</a>
 									<a>

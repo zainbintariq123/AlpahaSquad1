@@ -3,7 +3,7 @@ import style from './product.module.css';
 export default function Event() {
 	return (
 		<>
-			<div className="flex pl-20 pt-40">
+			<div className="flex pl-20 pt-40 d-none">
 				<div className="w-2/3">
 					<p className="text-[4rem] leading-[4.4rem]">Boost adoption of product and services</p>	
 					<p className="text-[1.75rem] pt-8">

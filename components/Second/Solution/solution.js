@@ -10,15 +10,14 @@ export default function Solution() {
 				{/* <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" /> */}
 			</Head>
 			<main>
-
-				<div className="flex pl-20 pt-36 pb-64">
-					<div className="w-1/2">
+				<div className="flex flex-wrap pl-0 sm:pl-0 md:pl-20 lg:pl-20  pt-36 pb-64">
+					<div className="w-full sm:w-full md:w-1/2 lg:w-1/2">
 						<img src="/fruit.svg"></img>
 					</div>
-					<div className="w-3/5">
+					<div className="w-full sm:w-full md:w-3/5 lg:w-3/5">
 						<div className="flex flex-col">
-							<p className="text-[4rem] font-bold  leading-[4.4rem]  f-l">Gather data to offer a bespoke solution</p>
-							<p className="text-[1.75rem] pt-8 f-f-r">
+							<p className="px-6 sm:px-6 md:px-0 lg:px-0 text-[2rem] sm:text-[2rem] md:text-[4rem] font-bold leading-8 sm:leading-8 md:leading-[4.4rem]  f-l">Gather data to offer a bespoke solution</p>
+							<p className=" px-6 sm:px-6 md:px-0 lg:px-0 text-base sm:text-base md:text-[1.75rem] lg:text-[1.75rem] pt-8 f-f-r">
 								Here at Globex we take special care of
 								what your organization needs instead of
 								selling you a mass market tool that takes
@@ -26,14 +25,14 @@ export default function Solution() {
 								review each and every client business and 
 								oversee the team that tailores a solution
 							</p>
-							<div className="flex flex-row pt-6">
+							<div className="flex flex-row pt-6 pl-6 sm:pl-6 md:pl-0 lg:pl-0">
 								<div>
 									<img src="/richel.png"></img>
 								</div>
-								<div className="flex flex-col items-center pl-3">
+								<div className="flex flex-col items-center justify-center pl-3">
 									<div>
-										<p className="text-[1.75rem] f-l">Rachel Dawson</p>
-										<p className="f-f-r">CEO, Globex Workspaces</p>
+										<p className=" sm:text:base md:text-[1.75rem] f-l">Rachel Dawson</p>
+										<p className="f-f-r text-sm sm:text-sm md:text-base">CEO, Globex Workspaces</p>
 									</div>
 								</div>
 							</div>

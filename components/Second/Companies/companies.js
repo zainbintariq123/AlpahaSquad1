@@ -3,7 +3,7 @@ import style from './company.module.css';
 export default function Company() {
 	return (
 		<>
-			<div className="">
+			<div className="hidden">
 				<div className="pt-[11rem]"  >
 					<p className={`${style.line } mx-[16rem] h-[1px] w-auto`} />
 					<div className="flex pl-20 justify-center w-full pt-8">

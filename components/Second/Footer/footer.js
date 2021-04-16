@@ -3,9 +3,9 @@ import style from './footer.module.css';
 export default function Footer() {
 	return (
 		<>
-			<div className="flex flex-col items-center pt-72">
+			<div className="flex flex-col items-center pt-72 hidden">
 				<div>
-					<p className="inline-block py-5 px-3.5 border text-center text-4xl m-0 bg-gray-900 text-white">
+					<p className="inline-block py-5 px-3.5 border text-center text-[2rem] m-0 bg-gray-900 text-white f-m-w">
 						PR
 					</p>
 				</div>
