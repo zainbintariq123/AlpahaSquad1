@@ -8,7 +8,7 @@ export default function Product() {
 				<div className="flex pl-20 absolute top-[-89px] ">
 					<div className="w-[1/4] shadow-md bg-white">
 						<div className="w-2/3">
-							<p className="text-[2rem] pl-6 pt-6">Download the app</p>
+							<p className="text-[2rem] pl-6 font-bold pt-6 f-l">Download the app</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6 ">
@@ -18,7 +18,7 @@ export default function Product() {
 					</div>
 					<div className="w-[1/4] rounded shadow-md mx-4 bg-white">
 						<div className="w-2/3">
-							<p className="text-[2rem] pl-6 pt-6">Effortless onboarding</p>
+							<p className="text-[2rem] pl-6 pt-6 pt-6 font-bold f-l">Effortless onboarding</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6">
@@ -28,7 +28,7 @@ export default function Product() {
 					</div>	
 					<div className="w-[1/4] rounded shadow-md mr-3 bg-white">
 						<div className="w-2/3">
-							<p className="text-[2rem] pl-6 pt-6">Access from anywhere</p>
+							<p className="text-[2rem] pl-6 pt-6 pt-6 f-l font-bold">Access from anywhere</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6">
@@ -38,7 +38,7 @@ export default function Product() {
 					</div>
 					<div className="w-[1/4] rounded shadow-md bg-white">
 						<div>
-							<p className="text-[2rem] pl-6 pt-6">Build & ship rapidly</p>
+							<p className="text-[2rem] pl-6 pt-6 pt-6 f-l font-bold">Build & ship rapidly</p>
 						</div>
 						<div className="flex justify-end">
 							<div className="py-6 ">  
@@ -50,8 +50,8 @@ export default function Product() {
 
 				<div className="flex pl-20 pt-80">
 					<div className="w-2/3">
-						<p className="text-[4rem] leading-[4.4rem]">Boost adoption of product and services</p>	
-						<p className="text-[1.75rem] pt-8 w-11/12">
+						<p className="text-[4rem] leading-[4.4rem] font-bold f-l">Boost adoption of product and services</p>	
+						<p className="text-[1.75rem] pt-8 w-11/12 f-f-r">
 							Here at Globex we take special care of what your organization
 							needs instead of selling you a mass market tool that takes a
 							one size fits all approach. I personally review each and every
@@ -59,7 +59,7 @@ export default function Product() {
 						</p>
 
 						<p 
-							className="inline-flex pt-10 text-[#D53F8C]">
+							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold">
 							Lets Get Started 
 							<span className="mt-1 ml-2">
 								<img src="/next.svg"></img>
@@ -121,8 +121,8 @@ export default function Product() {
 						</div>
 					</div>
 					<div className="w-2/3 pl-20">
-						<p className="text-[4rem] leading-[4.4rem]">Stay up to date with how you’re performing</p>	
-						<p className="text-[1.75rem] pt-8">
+						<p className="text-[4rem] leading-[4.4rem] font-bold f-l">Stay up to date with how you’re performing</p>	
+						<p className="text-[1.75rem] pt-8 f-f-r">
 							Here at Globex we take special care of what your organization needs instead of
 							selling you a mass market tool that takes a one size fits all approach.
 							I personally review each and every client business and oversee the team
@@ -130,7 +130,7 @@ export default function Product() {
 						</p>
 
 						<p 
-							className="inline-flex pt-10 text-[#D53F8C]">
+							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold">
 							Lets Get Started 
 							<span className="mt-1 ml-2">
 								<img src="/next.svg"></img>
@@ -141,8 +141,8 @@ export default function Product() {
 				</div>
 				<div className="flex pl-20 pt-40 mt-7">
 					<div className="w-2/3 mr-20">
-						<p className="text-[4rem] leading-[4.4rem]">Easily manage sales through our invoicing system</p>	
-						<p className="text-[1.75rem] pt-8">
+						<p className="text-[4rem] leading-[4.4rem] font-bold f-l">Easily manage sales through our invoicing system</p>	
+						<p className="text-[1.75rem] pt-8 f-f-r">
 							Here at Globex we take special care of what your organization needs instead
 							of selling you a mass market tool that takes a one size fits all approach.
 							I personally review each and every client business and oversee the team
@@ -150,7 +150,7 @@ export default function Product() {
 						</p>
 
 						<p 
-							className="inline-flex pt-10 text-[#D53F8C]">
+							className="inline-flex pt-10 text-[#D53F8C] f-f-r font-semibold">
 							Lets Get Started 
 							<span className="mt-1 ml-2">
 								<img src="/next.svg"></img>

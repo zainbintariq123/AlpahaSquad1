@@ -10,8 +10,13 @@
 html,body{
   padding: 0;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
 }
 .f-f-r{
   font-family: 'Raleway', sans-serif;
+}
+.f-l {
+  font-family: 'Lato', sans-serif;
+}
+.f-m {
+  font-family: 'Manrope', sans-serif;
 }

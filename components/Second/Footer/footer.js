@@ -10,38 +10,38 @@ export default function Footer() {
 					</p>
 				</div>
 				<div className="pt-5">
-					<p className="font-medium text-2xl">Build. Review. Ship</p>
+					<p className="font-medium text-2xl f-l font-bold">Build. Review. Ship</p>
 				</div>
 				<div className="flex pt-10">
 					<div>
-						<p className="text-base">Download Now</p>
+						<p className="text-base f-m">Download Now</p>
 					</div>
 					<div className="pl-6">
-						<p>Licence</p>
+						<p className="f-m">Licence</p>
 					</div>
 				</div>
 				<div className="flex pt-6"> 
 					<div>
-						<p>About</p>	
+						<p className="f-m">About</p>	
 					</div>
 					<div className="pl-6">
-						<p>Features</p>	
+						<p className="f-m">Features</p>	
 					</div>
 					<div className="pl-6">
-						<p>Pricing</p>	
+						<p className="f-m">Pricing</p>	
 					</div>
 					<div className="pl-6">
-						<p>Careers</p>	
+						<p className="f-m">Careers</p>	
 					</div>
 					<div className="pl-6">
-						<p>Help</p>	
+						<p className="f-m">Help</p>	
 					</div>
 					<div className="pl-6">
-						<p>Privacy Policy</p>	
+						<p className="f-m">Privacy Policy</p>	
 					</div>
 				</div>
 				<div className="pt-5">
-					<p>&copy; 2020 Prodify. All rights reserved </p>
+					<p className="f-m">&copy; 2020 Prodify. All rights reserved </p>
 				</div>
 				<div className="pt-9">
 					<p className={`${style.line } px-72 h-[1px] w-auto`} />
@@ -56,9 +56,6 @@ export default function Footer() {
 						<button className="focus-within:outline-none">
 							<img src="/GooglePlay.svg"></img>
 						</button>
-					</div>
-					<div>
-
 					</div>
 				</div>
 			</div>

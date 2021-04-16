@@ -10,7 +10,6 @@ export default function Task() {
   const [newName, setName] = useState('');
   const [data, setData] = useState([]);
   const checkData = (e) =>{
-    debugger
 		setWidth(e.clientX);
     setHeight(e.clientY);
     setcheck(!check)
@@ -18,13 +17,13 @@ export default function Task() {
   }
 
   const mystyle = {
-    left: width-45,
-    top: heights+2
+    left: width-42,
+    top: heights+45
   }
 
   const textarea  = {
-    left : width - 25 ,
-    top: heights + 25 
+    left : width-25,
+    top: heights + 70 
   }
 
   const showBox = (e) =>{
@@ -33,9 +32,7 @@ export default function Task() {
 
   const saveData = () =>{
     if(newName.length > 1) {
-      debugger
       setData([...data, {id: uuidv4(), name: newName }]);
-      debugger
       setName('');
       console.log(data);
       setInput(!input);
@@ -61,7 +58,7 @@ export default function Task() {
     <div className="container flex flex-col justify-center relative bg-gray-400 m-auto">
      <div className= {`${styles.mainDiv} shadow-md mx-32 m-auto mt-8 `}>
         <p className="text-center text-4xl mt-12"> Detail App  </p>
-        <p className="text-white w-auto px-8 my-28  text-justify " onPointerUp={ (e) =>checkData(e)}>
+        <p className="text-white w-auto px-8 my-28  text-justify "  onMouseUp={ (e) =>checkData(e)}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
           Aenean massa. Cum sociis natoque equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus
           in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
@@ -81,12 +78,13 @@ export default function Task() {
         {
           input &&
             // <input class="form-input mt-1 border w-auto absolute left-[42rem]" placeholder="Jane Doe"/>
-            <div style={textarea} class={`${styles.textBox}`}>
+            <div style={textarea} class={`${styles.textBox} absolute`}>
               <div className="flex flex-col w-full">
                 <div>
                   <textarea 
                     value={newName} 
-                    className="focus-within:outline-none h-16 rounded w-[16.188rem]"
+                    
+                    className="focus-within:outline-none h-16 rounded w-[16.188rem] "
                     onChange={(e)=> updateName(e)} >
                   </textarea>
                 </div> 

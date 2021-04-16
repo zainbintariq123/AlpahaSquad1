@@ -22,14 +22,14 @@ export default function Main() {
 								PR
 							</p>
 						</div>
-						<p className="mb-0 text-8xl font-semibold text-gray-900 pt-36">Build.</p>
-						<p className="mb-0 text-8xl font-semibold text-gray-900">Review.</p>
-						<p className="mb-0 text-8xl font-semibold text-gray-900">Ship.</p>
+						<p className="mb-0 text-8xl font-semibold text-gray-900 pt-36 f-l">Build.</p>
+						<p className="mb-0 text-8xl font-semibold text-gray-900 f-l ">Review.</p>
+						<p className="mb-0 text-8xl font-semibold text-gray-900 f-l">Ship.</p>
 
-						<p className="text-2xl pt-20">
+						<p className="text-2xl pt-20 f-f-r">
 							The next big thing starts here.
 						</p>
-						<p className="text-2xl w-[32.188rem]">	 
+						<p className="text-2xl w-[32.188rem] f-f-r">	 
 							Get Prodify and be the first to market with
 							an integrated product that you love
 						</p>

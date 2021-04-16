@@ -17,7 +17,7 @@ export default function Solution() {
 					</div>
 					<div className="w-3/5">
 						<div className="flex flex-col">
-							<p className="text-[4rem] font-medium leading-[4.4rem]">Gather data to offer a bespoke solution</p>
+							<p className="text-[4rem] font-bold  leading-[4.4rem]  f-l">Gather data to offer a bespoke solution</p>
 							<p className="text-[1.75rem] pt-8 f-f-r">
 								Here at Globex we take special care of
 								what your organization needs instead of
@@ -32,8 +32,8 @@ export default function Solution() {
 								</div>
 								<div className="flex flex-col items-center pl-3">
 									<div>
-										<p className="text-[1.75rem]">Rachel Dawson</p>
-										<p>CEO, Globex Workspaces</p>
+										<p className="text-[1.75rem] f-l">Rachel Dawson</p>
+										<p className="f-f-r">CEO, Globex Workspaces</p>
 									</div>
 								</div>
 							</div>
