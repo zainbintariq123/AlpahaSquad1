@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Head from 'next/head'
 import styles from './task.module.css'
 import {v4 as uuidv4} from 'uuid';
+import {CSVLink} from 'react-csv';
 export default function Task() {
   const [heights, setHeight] = useState('');
   const [width, setWidth] = useState('');
@@ -9,7 +10,22 @@ export default function Task() {
   const [input, setInput] = useState(false);
   const [newName, setName] = useState('');
   const [data, setData] = useState([]);
+  const [selected, setSelectedData] = useState('');
+  const [headers, setHeaders] = useState([
+    {
+      label:'Id', key:'id'
+    },
+    {
+      label: 'name', key:'name'
+    },
+    {
+      label: 'selected', key: 'selected'
+    }
+  ]);
   const checkData = (e) =>{
+    debugger
+    setSelectedData(window.getSelection().toString());
+
 		setWidth(e.clientX);
     setHeight(e.clientY);
     setcheck(!check)
@@ -32,7 +48,7 @@ export default function Task() {
 
   const saveData = () =>{
     if(newName.length > 1) {
-      setData([...data, {id: uuidv4(), name: newName }]);
+      setData([...data, {id: uuidv4(), name: newName, selected : selected  }]);
       setName('');
       console.log(data);
       setInput(!input);
@@ -71,7 +87,7 @@ export default function Task() {
           leo eget bibendum sodales, augue velit cursus nunc,. 
         </p>
         {
-          check && 
+          check && selected.length > 1 && 
             <p style={mystyle} className={`${styles.plusBtn} text-3xl cursor-pointer`} onClick={(e)=> showBox(e)}>+</p>
         }
         
@@ -102,6 +118,11 @@ export default function Task() {
         <div className="pb-5 text-center">
           <button className={`${styles.mainDiv} focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white`} onClick={showData}>Click To Console Data</button>
         </div>
+        <div className="pb-5 text-center">
+          <CSVLink data={data} headers={headers} >
+            <button className={`${styles.mainDiv} focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white`}>Download</button>
+          </CSVLink>
+        </div>
         <div className="text-center">
           <p className="text-2xl"> Text will be display in table After Entering. </p>
         </div>
@@ -118,6 +139,10 @@ export default function Task() {
                             <th
                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                 Data.
+                            </th>
+                            <th
+                              class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                               Selected
                             </th>
                         </tr>
                     </thead>
@@ -139,6 +164,9 @@ export default function Task() {
                               </td>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                   <p class="text-gray-900 whitespace-no-wrap text-center">{result.name}</p>
+                              </td>
+                              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{result.selected}</p>
                               </td>
                              </tr> 
                               )  
