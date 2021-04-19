@@ -26,8 +26,8 @@ export default function Task() {
     debugger
     setSelectedData(window.getSelection().toString());
 
-		setWidth(e.clientX);
-    setHeight(e.clientY);
+		setWidth(e.screenX);
+    setHeight(e.screenY);
     setcheck(!check)
     console.log('The calculated width is', width)
   }
