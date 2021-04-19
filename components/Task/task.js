@@ -33,13 +33,13 @@ export default function Task() {
   }
 
   const mystyle = {
-    left: width-42,
-    top: heights+1
+    left: width-170,
+    top: heights-270
   }
 
   const textarea  = {
     left : width-25,
-    top: heights + 70 
+    top: heights + 20 
   }
 
   const showBox = (e) =>{
@@ -73,25 +73,27 @@ export default function Task() {
     console.log('Array with values', data)
   }
 	return (
-    <div className="container flex flex-col justify-center relative bg-gray-400 m-auto">
+    <div className="container flex flex-col relative justify-center bg-gray-400 m-auto">
      <div className= {`${styles.mainDiv} shadow-md mx-32 m-auto mt-8 `}>
         <p className="text-center text-4xl mt-12"> Detail App  </p>
-        <p className="text-white w-auto px-8 my-28  text-justify "  onMouseUp={ (e) =>checkData(e)}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-          Aenean massa. Cum sociis natoque equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus
-          in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-          Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-          ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
-          sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
-          luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-          sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
-          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat,
-          leo eget bibendum sodales, augue velit cursus nunc,. 
-        </p>
-        {
-          check && selected.length > 1 && 
-            <p style={mystyle} className={`${styles.plusBtn} text-3xl cursor-pointer`} onClick={(e)=> showBox(e)}>+</p>
-        }
+        <div className="relative">
+          <p className="text-white w-auto px-8 my-28  text-justify  "  onMouseUp={ (e) =>checkData(e)}>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus
+            in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
+            Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+            ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+            sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
+            luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+            sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
+            tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat,
+            leo eget bibendum sodales, augue velit cursus nunc,. 
+          </p>
+          {
+            check && selected.length > 1 && 
+              <p style={mystyle} className={`${styles.plusBtn} text-3xl cursor-pointer mb-0`} onClick={(e)=> showBox(e)}>+</p>
+          }
+        </div>
         
         {
           input &&
@@ -118,11 +120,11 @@ export default function Task() {
             </div>    
           }
         <div className="pb-5 text-center">
-          <button className={`${styles.mainDiv} focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white`} onClick={showData}>Click To Console Data</button>
+          <button className="bg-gray-400 focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white" onClick={showData}>Click To Console Data</button>
         </div>
         <div className="pb-5 text-center">
           <CSVLink data={data} headers={headers} >
-            <button className={`${styles.mainDiv} focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white`}>Download</button>
+            <button className="bg-gray-400 focus-within:outline-none px-4 py-2 rounded-full shadow-md  text-white">Download</button>
           </CSVLink>
         </div>
         <div className="text-center">
@@ -149,7 +151,6 @@ export default function Task() {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* <tr> */}
                           {
                             data.map((result,key)=>{
                               return (
@@ -174,7 +175,6 @@ export default function Task() {
                               )  
                             })
                           }
-                        {/* </tr> */}
                     </tbody>
                 </table>
             </div>
