@@ -34,7 +34,7 @@ export default function Task() {
 
   const mystyle = {
     left: width-42,
-    top: heights+45
+    top: heights+1
   }
 
   const textarea  = {
@@ -53,6 +53,8 @@ export default function Task() {
       console.log(data);
       setInput(!input);
       setcheck(!check);
+      setHeight('');
+      setWidth('');
     }
     if(newName.length < 1) {
       alert('please fill the box with atleast 1 length');
