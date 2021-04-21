@@ -1,5 +1,15 @@
-import '../styles/globals.css'
-import Head from "next/head"
+import '../styles/globals.css';
+import {config, library} from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// config.autoAddCss = false  // tell Font awesome to skip adding the css functionality since it is being imported
+
+import Head from "next/head";
+import { faAngleUp, faAngleDown, faSearch, faFilter, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons';
+
+library.add(fab, faFacebook, faCoffee, faAngleUp, faAngleDown, faSearch, faFilter, faAngleLeft, faAngleRight);
 
 function MyApp({ Component, pageProps }) {
   return (

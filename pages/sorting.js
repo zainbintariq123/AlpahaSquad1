@@ -8,7 +8,7 @@ export default function Sort() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container m-auto">
+      <main className="container mx-auto">
         <Sorting />
       </main>
     </div>
