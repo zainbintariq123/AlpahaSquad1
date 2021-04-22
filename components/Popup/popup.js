@@ -31,7 +31,6 @@ export default function Popup(props) {
   // },[])
 
 	const showPopup = (e, textValue) =>{ 
-		debugger
     const result = data.find(item => item.selected === textValue);
     let namevalue = result.name;
     let id = result.id;
@@ -43,7 +42,6 @@ export default function Popup(props) {
   }
 
 	const deleteData = () => {
-		debugger
 		props.updateData(Id);
 	}
   

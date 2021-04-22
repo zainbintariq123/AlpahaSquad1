@@ -63,7 +63,7 @@ export default function Task() {
     if(newName.length > 1) {
       const newData = [...data, {id: uuidv4(), name: newName, selected : selected.trim()  }];
       setData(newData);
-      debugger
+      
       setName('');
       setInput(!input);
       setcheck(!check);
@@ -97,7 +97,7 @@ export default function Task() {
   },[])
 
   const showPopup = (e, textValue) =>{ 
-    debugger
+    
     const result = data.find(item => item.selected === textValue);
     let namevalue = result.name;
     let id = result.id;
@@ -109,7 +109,7 @@ export default function Task() {
   }
 
   const deleteData = (key) =>{
-    debugger
+    
     const result = data.filter(item=>{
       return item.id !== key;
     })
