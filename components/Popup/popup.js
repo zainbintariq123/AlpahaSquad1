@@ -3,6 +3,7 @@ import Link from 'next/link';
 // import styles from './task.module.css'
 import {v4 as uuidv4} from 'uuid';
 import {CSVLink} from 'react-csv';
+import style from './popup.module.css';
 export default function Popup(props) {
 	
 	let 	{ data, updateData } = props;
@@ -50,9 +51,9 @@ export default function Popup(props) {
 			<span onClick={(e)=> showPopup(e, props.textValue)} className="text-blue-700 relative cursor-pointer"> {props.textValue}
 				{
 					popup === true &&
-						<div className="absolute rounded text-white flex border top-[-20px] left-0 w-50 z-50 bg-gray-400">
+						<div className="absolute rounded text-white flex border top-[-20px] left-0 w-50 z-32 bg-gray-400">
 							<div>
-								<p className="inline-flex text-sm ml-2">{name}</p>
+								<p className={`${style.popup} inline-flex text-sm ml-2`}>{name}</p>
 							</div>
 							<div>
 								<button className="focus-within:outline-none inline-flex mx-3" onClick={deleteData}>X</button>
