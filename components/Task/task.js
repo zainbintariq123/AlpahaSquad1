@@ -61,6 +61,10 @@ export default function Task() {
     setInput(!input);
   };
 
+  const showData = () =>{
+    console.log('Your data is here now', data);
+  }
+
   const saveData = () =>{
     if(newName.length > 1) {
       const newData = [...data, {id: uuidv4(), name: newName, selected : selected.trim()  }];
@@ -98,6 +102,7 @@ export default function Task() {
     setInput(!input);
     setcheck(!check);
   };
+
   useEffect(()=>{
     let result = localStorage.getItem("Result");
     if(result){
@@ -107,7 +112,8 @@ export default function Task() {
       .then(res =>{
         
         console.log('response added succesfully' , res.data) 
-      }).catch(e=>{ 
+      }).catch(e=>{
+        
         console.log('error have been occured now', e);
       })
 
