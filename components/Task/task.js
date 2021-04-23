@@ -130,10 +130,10 @@ export default function Task() {
 	return (
     <>
       <div className="container bg-gray-400 mx-auto mt-auto h-screen">
-        <div className= {`${styles.mainDiv} shadow-md h-screen   mx-32 mt-8 `}>
+        <div className= {`${styles.mainDiv} shadow-md   mx-32 mt-8 `}>
           <p className="text-center text-4xl mt-12"> Detail App  </p>
-            <div className="relative h-screen">
-              <p className="text-white w-auto px-4  my-28  text-justify" onDoubleClick={(e) =>checkData(e)}  onMouseUp={ (e) =>checkData(e)}>
+            <div className="relative">
+              <p className="text-white w-auto px-4  my-28  text-justify " onDoubleClick={(e) =>checkData(e)}  onMouseUp={ (e) =>checkData(e)}>
                 {
                   text.split(" " || "," || ".").map(textValue =>{
                   return data.find(item => item.selected == textValue) ? 
