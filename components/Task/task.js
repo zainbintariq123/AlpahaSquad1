@@ -61,10 +61,6 @@ export default function Task() {
     setInput(!input);
   };
 
-  const showData = () =>{
-    console.log('Your data is here now', data);
-  }
-
   const saveData = () =>{
     if(newName.length > 1) {
       const newData = [...data, {id: uuidv4(), name: newName, selected : selected.trim()  }];
@@ -81,12 +77,14 @@ export default function Task() {
         "post": `${updatedData}`
       }
 
+
       axios.post(postUrl, post)
       .then(res =>{
         console.log('response added succesfully' , res.data) 
       }).catch(e=>{
         console.log('error have been occured now', e);
       })
+     
     }
     if(newName.length < 1) {
       alert('please fill the box with atleast 1 length');
@@ -102,6 +100,15 @@ export default function Task() {
     setInput(!input);
     setcheck(!check);
   };
+  const showData = () =>{
+    if(data.length > 0) {
+      console.log('Data is now here', data)
+    }
+    else  {
+      console.log('please add data into array');
+    }
+    
+  };
 
   useEffect(()=>{
     let result = localStorage.getItem("Result");
@@ -110,14 +117,12 @@ export default function Task() {
     }
     axios.get(getUrl)
       .then(res =>{
-        
         console.log('response added succesfully' , res.data) 
       }).catch(e=>{
-        
         console.log('error have been occured now', e);
       })
 
-  },[data]);
+  },[]);
 
   const deleteData = (check) =>{ 
     const result = data.filter((data)=>{
@@ -129,7 +134,7 @@ export default function Task() {
   };
 	return (
     <>
-      <div className="container bg-gray-400 mx-auto mt-auto h-screen">
+      <div className="container bg-gray-400 mx-auto">
         <div className= {`${styles.mainDiv} shadow-md   mx-32 mt-8 `}>
           <p className="text-center text-4xl mt-12"> Detail App  </p>
             <div className="relative">
@@ -151,6 +156,7 @@ export default function Task() {
           
           {
             input &&
+              // <input class="form-input mt-1 border w-auto absolute left-[42rem]" placeholder="Jane Doe"/>
               <div style={textarea} className={`${styles.textBox} absolute`}>
                 <div className="flex flex-col w-full">
                   <div>
