@@ -4,6 +4,9 @@ import styles from './task.module.css'
 import {v4 as uuidv4} from 'uuid';
 import {CSVLink} from 'react-csv';
 import Popup  from '../Popup/popup';
+import axios from 'axios';
+const postUrl = "https://secret-meadow-95086.herokuapp.com/record/create";
+const getUrl = "https://secret-meadow-95086.herokuapp.com/record/list";
 export default function Task() {
   const [heights, setHeight] = useState('');
   const [width, setWidth] = useState('');
@@ -14,7 +17,6 @@ export default function Task() {
   const [selected, setSelectedData] = useState('');
   const [name, setSelectName] = useState('');
   const [id, setSelectId] = useState('');
-  const [popup, setPopup] = useState(false);
   const [textval, setTextVal] = useState('');
   const [text, setText] = useState(
     `
@@ -26,7 +28,7 @@ export default function Task() {
       sterilized throat. mass No one before. It also is important clinical need peanut taste developers.
       Homework lion. Lorem However, mass  ecological Mauris a film very nibh. v Till members arrowsa functional
       drink members, lorem propaganda very outdoor running now life.`
-  )
+  );
   const [headers, setHeaders] = useState([
     {
       label:'Id', key:'id'
@@ -42,22 +44,22 @@ export default function Task() {
     setSelectedData(window.getSelection().toString());
 		setWidth(e.clientX);
     setHeight(e.clientY);
-    setcheck(!check)
-  }
+    setcheck(!check);
+  };
 
   const mystyle = {
     left: width-10,
     top: heights
-  }
+  };
 
   const textarea  = {
     left : width + 10,
     top: heights +30  
-  }
+  };
 
   const showBox = (e) =>{
     setInput(!input);
-  }
+  };
 
   const saveData = () =>{
     if(newName.length > 1) {
@@ -69,55 +71,59 @@ export default function Task() {
       setcheck(!check);
       setHeight('');
       setWidth('');
+      const updatedData = JSON.stringify(newData);
       localStorage.setItem('Result', JSON.stringify(newData));
+      const post = {
+        "post": `${updatedData}`
+      }
+
+      axios.post(postUrl, post)
+      .then(res =>{
+        console.log('response added succesfully' , res.data) 
+      }).catch(e=>{
+        console.log('error have been occured now', e);
+      })
     }
     if(newName.length < 1) {
       alert('please fill the box with atleast 1 length');
     }
 
-  }
+  };
 
   const updateName = (e) =>{
     setName(e.target.value);
-  }
+  };
 
   const CancelBox = () =>{
     setInput(!input);
     setcheck(!check);
-  }
-  const showData = () =>{
-    
-  }
-
+  };
   useEffect(()=>{
     let result = localStorage.getItem("Result");
     if(result){
       setData(JSON.parse(result));
     }
-  },[])
+    axios.get(getUrl)
+      .then(res =>{
+        
+        console.log('response added succesfully' , res.data) 
+      }).catch(e=>{ 
+        console.log('error have been occured now', e);
+      })
 
-  const showPopup = (e, textValue) =>{ 
-    
-    const result = data.find(item => item.selected === textValue);
-    let namevalue = result.name;
-    let id = result.id;
-    setTextVal(textValue);
-    setSelectName(namevalue);
-    setSelectId(id);
-    console.log(name + " " + id);
-    setPopup(!popup)
-  }
+  },[]);
 
-  const deleteData = (key) =>{
-    
-    const result = data.filter(item=>{
-      return item.id !== key;
+  const deleteData = (check) =>{ 
+    const result = data.filter((data)=>{
+      return data.id !== check 
     })
+
     setData(result);
-  }
+    localStorage.setItem('Result', JSON.stringify(result));
+  };
 	return (
     <>
-      <div className="container bg-gray-400 mx-auto">
+      <div className="container bg-gray-400 mx-auto mt-auto h-screen">
         <div className= {`${styles.mainDiv} shadow-md   mx-32 mt-8 `}>
           <p className="text-center text-4xl mt-12"> Detail App  </p>
             <div className="relative">
@@ -125,7 +131,7 @@ export default function Task() {
                 {
                   text.split(" " || "," || ".").map(textValue =>{
                   return data.find(item => item.selected == textValue) ? 
-                    <Popup textValue={textValue} updateData={deleteData}  name={name} data={data}  />
+                    <Popup textValue={textValue} updateData={deleteData} name={name} data={data}  />
                   
                     : <span>{ textValue + " "} </span>                
                   })
@@ -139,7 +145,6 @@ export default function Task() {
           
           {
             input &&
-              // <input class="form-input mt-1 border w-auto absolute left-[42rem]" placeholder="Jane Doe"/>
               <div style={textarea} className={`${styles.textBox} absolute`}>
                 <div className="flex flex-col w-full">
                   <div>
@@ -169,60 +174,6 @@ export default function Task() {
               <button className="bg-gray-400 focus-within:outline-none px-4 py-2 rounded-full shadow-md text-white">Download</button>
             </CSVLink>
           </div>
-          <div className="text-center">
-            <p className="text-2xl"> Text will be display in table After Entering. </p>
-          </div>
-          <div>
-            <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-              <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                  <table className="min-w-full leading-normal">
-                      <thead>
-                          <tr>
-                              <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                  ID
-                              </th>
-                              <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                  Data.
-                              </th>
-                              <th
-                                className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                Selected
-                              </th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                            {
-                              data.map((result,key)=>{
-                                return (
-                                  <tr>
-                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5" id={key}>
-                                      <div className="flex items-center">
-
-                                        <div className="ml-3" >
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                {result.id}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm id={key}">
-                                    <p className="text-gray-900 whitespace-no-wrap text-center">{result.name}</p>
-                                </td>
-                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm" id={key}>
-                                  <p className="text-gray-900 whitespace-no-wrap text-center">{result.selected}</p>
-                                </td>
-                              </tr> 
-                                )  
-                              })
-                            }
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-          </div>
-
         </div>
       </div>
     </>
