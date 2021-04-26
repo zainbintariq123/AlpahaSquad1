@@ -60,10 +60,9 @@ export default function GraphUser() {
       phone: phone,
       website: website
 		}
-		debugger
+		console.log('The newData is now', newData);
 		AddUser({variables:{type: newData}});
 
-		console.log('The newData is now', newData);
 	}
 	return (
 		<>
