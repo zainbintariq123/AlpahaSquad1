@@ -1,0 +1,5 @@
+.scroller{
+	overflow: auto;
+	height: 24rem;
+	width: fit-content;
+}

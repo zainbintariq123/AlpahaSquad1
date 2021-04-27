@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Manrope&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet"></link>
         </Head>
-        <div>
+        <div className="container mx-auto">
           {/* <Graph /> */}
           <GraphUser />
         </div>
