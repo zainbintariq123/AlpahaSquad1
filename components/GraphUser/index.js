@@ -87,7 +87,7 @@ export default function GraphUser() {
         </div>
       </nav>
       <Users user={data.users.data} />
-			<div className="bg-white px-40 px-32  border rounded bg-gray-900 pt-8">
+			<div className=" px-40 px-32  border rounded bg-gray-900 pt-8">
         <h3 className="text-3xl my-5 font-medium leading-6 text-center my-4 text-white">Personal Information</h3>
         <div className="mt-5 shadow-md px-5 bg-gray-900 mb-20">
           <form action="#" className="bg-white">
