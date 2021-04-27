@@ -11,13 +11,25 @@ import {faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons';
 import { ApolloClient, gql, InMemoryCache, useQuery } from "@apollo/client"
 import {ApolloProvider} from '@apollo/client';
 import Graph from '../components/Graph';
+import {DefaultOptions} from '@apollo/client';
 import GraphUser from '../components/GraphUser';
 // uri:'https://rickandmortyapi.com/graphql'  characters
 // uri:'https://graphqlzero.almansi.me/api'   users
 // uri:'https://48p1r2roz4.sse.codesandbox.io/',
+const defaultOption = {
+  watchQuery: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'ignore',
+  },
+  query: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'all',
+  }
+}
 const client  = new ApolloClient({
   uri:'https://graphqlzero.almansi.me/api',
-  cache:  new InMemoryCache()
+  cache:  new InMemoryCache(),
+  defaultOptions: defaultOption
 });
 
 library.add(fab, faFacebook, faCoffee, faAngleUp, faAngleDown, faSearch, faFilter, faAngleLeft, faAngleRight);

@@ -2,6 +2,7 @@ import { gql, useQuery, useMutation } from "@apollo/client"
 import { useState } from "react";
 import Users from './Users';
 import React from 'react';
+import { useEffect } from "react/cjs/react.development";
 
 const EXCHANGE_RATES = gql` 
 	query {
@@ -47,15 +48,23 @@ export default function GraphUser() {
 	const [username, setUsername] = useState("");
 	const [phone, setPhone] = useState("");
 	const [website, setWebsite] = useState("");
+  const [usersData, setUser] = useState([]);
 	if (loading) {
 		return <div>loading</div>;
 	}
 
 	if (error) {
-		return <div>{error}</div>;
+		return <div> please remove the error now {error}</div>;
 	}
 
-	const saveData  = (e) =>{
+  if(data) {
+    if(usersData.length<=0) {
+      setUser(data.users.data)
+    }
+  }
+
+	
+  const saveData  = (e) =>{
 		e.preventDefault();
 		const newData = {
       name: name,
@@ -71,6 +80,16 @@ export default function GraphUser() {
         {query: EXCHANGE_RATES }
       ]
     });
+
+    const newOne= {
+      id: usersData.length + 1,
+      name: name,
+      username: username,
+      phone: phone,
+      website: website,
+      email: email
+		}
+    usersData.push(newOne);
     debugger
 	}
 	return (
@@ -86,7 +105,7 @@ export default function GraphUser() {
           </button>
         </div>
       </nav>
-      <Users user={data.users.data} />
+      <Users user={usersData} />
 			<div className=" px-40 px-32  border rounded bg-gray-900 pt-8">
         <h3 className="text-3xl my-5 font-medium leading-6 text-center my-4 text-white">Personal Information</h3>
         <div className="mt-5 shadow-md px-5 bg-gray-900 mb-20">
