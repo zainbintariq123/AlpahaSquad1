@@ -47,9 +47,9 @@ function MyApp({ Component, pageProps }) {
         </Head>
         <div className="container mx-auto">
           {/* <Graph /> */}
-          <GraphUser />
+          {/* <GraphUser /> */}
+          <Component {...pageProps} />
         </div>
-        {/* <Component {...pageProps} /> */}
       </ApolloProvider>
     </>)
 }
